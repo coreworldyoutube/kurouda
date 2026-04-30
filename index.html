@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<button onclick="crawl()">Googleを取得</button>
-
-<pre id="out"></pre>
-
-<script>
-async function crawl() {
-    const res = await fetch("/crawl");
-    const data = await res.text();
-    document.getElementById("out").innerText = data;
-}
-</script>
-
-</body>
-</html>
+<button onclick="fetch('/crawl').then(r=>r.text()).then(t=>console.log(t))">
+Crawl
+</button>
