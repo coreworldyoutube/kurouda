@@ -5,6 +5,6 @@ app = Flask(__name__)
 
 @app.route("/crawl")
 def run():
-    return crawl("https://example.com")
+    return crawl("https://www.google.com/")
 
 app.run()
