@@ -1,9 +1,13 @@
-<button onclick="crawl()">Crawl</button>
+<button onclick="view()">View</button>
+
+<pre id="output"></pre>
 
 <script>
-function crawl() {
+function view() {
     fetch('/crawl?url=https://example.com')
         .then(r => r.text())
-        .then(t => console.log(t));
+        .then(t => {
+            document.getElementById("output").innerText = t;
+        });
 }
 </script>
