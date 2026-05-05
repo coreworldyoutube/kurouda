@@ -1,3 +1,9 @@
-<button onclick="fetch('/crawl').then(r=>r.text()).then(t=>console.log(t))">
-Crawl
-</button>
+<button onclick="crawl()">Crawl</button>
+
+<script>
+function crawl() {
+    fetch('/crawl?url=https://example.com')
+        .then(r => r.text())
+        .then(t => console.log(t));
+}
+</script>
