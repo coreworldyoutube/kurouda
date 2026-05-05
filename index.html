@@ -1,13 +1,1 @@
-<button onclick="view()">View</button>
-
-<pre id="output"></pre>
-
-<script>
-function view() {
-    fetch('/crawl?url=https://example.com')
-        .then(r => r.text())
-        .then(t => {
-            document.getElementById("output").innerText = t;
-        });
-}
-</script>
+<iframe src="https://www.google.com"></iframe>
