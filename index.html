@@ -1,1 +1,11 @@
-<iframe src="https://www.google.com"></iframe>
+<input id="url">
+<button onclick="go()">Go</button>
+
+<iframe id="frame"></iframe>
+
+<script>
+function go(){
+    const url = document.getElementById("url").value;
+    document.getElementById("frame").src = "/view?url=" + encodeURIComponent(url);
+}
+</script>
